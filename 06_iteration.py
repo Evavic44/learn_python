@@ -27,6 +27,34 @@ x = x + 1
 
 # while (condition):
 #   statements(s)
+
+# Example 1
+print('\nWhile Loop (Countdown Function)')
+def countdown(n):
+    while n > 0:
+        print(n)
+        n = n - 1
+    print('Blastoff!')
+
+countdown(10)
+
+# The flow of execution for a while statement:
+# 1. Determine whether the condition is true or false.
+# 2. If false, exit the while statement and continue execution at the next statement.
+# 3. If the condition is true, run the body and then go back to step 1.
+
+# Exercise:
+print('\nPrint N Loop')
+def print_n(string, n):
+    con = 0
+    while n > 0:
+        con += 1
+        print(f'{string} x {con}')
+        n = n - 1
+
+print_n('Hello World', 10)
+
+# Example 2
 num = 2
 count = 1
 
@@ -48,7 +76,7 @@ while count <= 10:
 # 2 x 10 = 20
 
 # Break Statement
-# This is a statement that is used to deferring a loop statement.
+# This is a statement that is used to break out of a loop.
 num = 3
 count = 1
 
@@ -159,7 +187,8 @@ while x < 20:
     print(counter)
     x += 1
 
-# Algorithm: is simply the number of steps required to complete a task.
+# Algorithm: an algorithm is a step-by-step procedure or a set of rules for performing a specific task
+# or solving a particular problem.
 
 # Algorithms do not require writing in a specific programming language. You can write an algorithm in any one you prefer
 # Although best practices require your algorithm is written in the language closest to the one the code will be written.
