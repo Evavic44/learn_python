@@ -13,6 +13,7 @@
 - [05. Fruitful Functions](05_fruitful-functions.py)
 - [06. Iteration](06_iteration.py)
 - [07. Strings](07_strings.py)
+- [08. Lists](08_lists.py)
 
 
 ## Exercises
