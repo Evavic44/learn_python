@@ -14,13 +14,15 @@
 - [06. Iteration](06_iteration.py)
 - [07. Strings](07_strings.py)
 - [08. Lists](08_lists.py)
-
+- [09. Dictionary](09_dictionaries.py)
+  
 
 ## Exercises
 - [3.14](exercise/3.14.py)
 - [4.30](exercise/4.30.py)
 - [5.14](exercise/5.14.py)
 - [8.40](exercise/8.40.py)
+- [10.15](exercise/10.15.py)
 
 <!-- References: -->
 [think_python]: https://greenteapress.com/wp/think-python-2e/
