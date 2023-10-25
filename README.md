@@ -15,6 +15,7 @@
 - [07. Strings](07_strings.py)
 - [08. Lists](08_lists.py)
 - [09. Dictionary](09_dictionaries.py)
+- [10. Tuples](10_tuples.py)
   
 
 ## Exercises
