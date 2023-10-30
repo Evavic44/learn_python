@@ -3,12 +3,13 @@
 # In a list, the indices have to be integers; in a dictionary they can be almost any type.
 
 # A dictionary contains a collection of indices, which are called keys, and a collection of values.
-# Each key is associated with a single values. The association of a key and a value is
+# Each key is associated with a single value. The association of a key and a value is
 # called a key-value pair.
 
 # Creating a dictionary
 a = dict()
-print(a)
+b = {}
+print(a, b)
 
 # The squiggly-brackets, {} represents an empty dictionary.
 # To add items to the dictionary, you can use square brackets:
@@ -42,7 +43,6 @@ my_dict_values = my_dict.values()
 chec_name = 'John Doe' in my_dict_values
 print(chec_name)
 print(my_dict_values)  # ['John Doe', 22, 'blue']
-
 
 # The in operator uses a different algorithm for lists and dictionaries.
 # For lists, the search is done in chronological order. This may take longer depending on how long the list is.
@@ -125,24 +125,26 @@ def dict_sorted(h):
 
 dict_sorted(my_dict2)
 
-# Reverse Lookup
+# Lookup
 # This is an operation that involves looking for the value of a key in a dictionary.
-# Given a dictionary 'my_dict2' and a key 'd', it is easy to find the corresponding value:
+# Given a dictionary 'dict2' and a key 'd', it is easy to find the corresponding value:
+dict2 = {'a': 94, 'b': 2, 'c': 10}
+v = dict2['b']
+print(v)  # Returns the value of the key 'd' which is 2.
 
-v = my_dict2['d']
-print(v)  # Returns the value of 'd' which is 4.
-
-
+# Reverse Lookup
+# What if you have the value, v, and you want to find the key, k? You have two problems:
+# There might be more than one key that maps to that value v
 # There is no simple syntax to do a reverse lookup, you have to search.
 
 def reverse_lookup(d, val):
-    for i in d:
-        if d[i] == val:
-            return i
-    raise LookupError()
+    for i in d:  # Loops through the key of the dictionary
+        if d[i] == val:  # Checks if the current value of the key matches with the passed in string
+            return i  # Returns the key of that value
+    raise LookupError()  # or raise an error if the operation fails
 
 
-print(reverse_lookup(my_dict, 'blue'))
+print(reverse_lookup(my_dict, 'blue'))  # Returns 'fav_color'
 
 # Dictionary Methods
 # The dictionary data structure also supports most of the built-in methods like lists.
@@ -210,12 +212,12 @@ m = dict()
 # locations when their keys are modified and hashed, and as such makes it hard to find a key.
 
 # That is why keys have to be hashable and why mutable lists aren't.
-# The solution is by using another data structure called tupules.
+# The solution is by using another data structure called tuples.
 
 # Memos
 # They are previously computed values that are stored for later use.
 
-known = {0:0, 1:1}
+known = {0: 0, 1: 1}
 def fibonacci(n):
     if n in known:
         return known[n]
@@ -249,9 +251,9 @@ def example2():
     verbose = False
 
 # This tells the interpreter to refer to the global variable not create a new one.
-# If a global variable refers to a mutable value, you don't need to declare it to mofify the value:
+# If a global variable refers to a mutable value, you don't need to declare it to modify the value:
 
-known2 = {0:0, 1:1}
+known2 = {0: 0, 1: 1}
 def example3():
     known2[2] = 2
 
