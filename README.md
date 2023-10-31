@@ -16,6 +16,7 @@
 - [08. Lists](08_lists.py)
 - [09. Dictionary](09_dictionaries.py)
 - [10. Tuples](10_tuples.py)
+- [11. Files](11_files.py)
   
 
 ## Exercises
@@ -23,7 +24,12 @@
 - [4.30](exercise/4.30.py)
 - [5.14](exercise/5.14.py)
 - [8.40](exercise/8.40.py)
+- [9.20](exercise/9.20.py)
 - [10.15](exercise/10.15.py)
+
+## Documentation
+- [Moby Shakespear](https://shakespearereadingsociety.co.uk/texts/1993originals/mobyshak.txt)
+- [Moby Hyphenator II](words.txt)
 
 <!-- References: -->
 [think_python]: https://greenteapress.com/wp/think-python-2e/
