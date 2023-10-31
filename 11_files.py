@@ -122,8 +122,44 @@ l3 = fin.readline().strip()
 l4 = fin.readline()
 print(l3)
 print(l4)
-
 # There should be no spacing between the character at line 3 and the one at line 4.
+
+# Other Read Methods
+poem = open('file.txt', 'r')  # Read file flag
+print(poem.name)  # Returns the name of the file: 'file.txt'.
+print(poem.mode)  # Returns the flag the file is opened with: 'r'.
+poem.close()
+
+# Context Managers
+# It is best practice to open text files using context managers,
+# This creates an execution context for a particular file so when this code block is
+# completed, it automatically closes the file.
+# It also closes the file when there are exceptions thrown.
+print('')
+# To open a file using the context manager, we use the 'with' keyword:
+with open('file.txt', 'r') as fi:
+    # words1 = fi.read()  # Returns all the elements of the file
+    # words2 = fi.readlines()  # Returns all the elements of the file in a list
+    # words3 = fi.readline()  # Returns the element in the first line.
+    # print(words3)
+
+    # If you're looping through a large file, it will not be efficient to try and read every line of the text file,
+    # using the readline method, as this may use up too much memory ro read each line.
+
+    # A solution would be to iterate through the elements:
+    # for line in fi:
+    #     print(line.strip())
+
+    # Alternatively, you can also pass in the length of the element you want
+    # to return using the read method in a while loop.
+    read_size = 100
+    word4 = fi.read(read_size)  # Read the first 100 elements.
+    fi.seek(0)  # Resets the position back to the beginning. The seek function also takes in any number of positions.
+    print(word4, end="")
+    # print(fi.tell())  # Tells us the position of the current
+    # while len(word4) > 0:
+    #     print(word4, end="*")
+    #     word4 = fi.read(read_size)
 
 # HEAD: Looping Operations on Text Files
 # We can use for loop to iterate words in a text file. For example:
@@ -175,6 +211,22 @@ fout.write(line2)
 line3 = 42
 # fout.write(line3)  # Expected str
 fout.write(str(line3))
+
+# Write Functions:
+# You can't write to a file that is opened as read-only.
+# with open('file.txt', 'r') as fe:
+#     fe.write('Hello World')  # UnsupportedOperation: not writable
+
+# To write to an already exisiting file without overwriting it, we use the 'a' flag.
+
+# with open('file2.txt', 'w') as fe:
+#     fe.write('This is the first line \n')
+#     fe.write('This is the second line')
+
+with open('file.txt', 'r') as rf:
+    with open('file_copy.txt', 'w') as wf:
+        for line in rf:  # For each line in file.txt, copy that line to file_copy.txt
+            wf.write(line)
 
 # Format Operator
 # The % symbol when used with integers is known as the modulus operator.
